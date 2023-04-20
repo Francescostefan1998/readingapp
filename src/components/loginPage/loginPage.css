@@ -6,15 +6,18 @@
   height: 100vh;
 }
 .login-page-container {
-  width: 400px;
-  height: 100px;
-  background-color: aqua;
+  width: 350px;
+  border-radius: 4px;
+  min-height: 80px;
+  background-color: var(--color-background-primary);
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 1.6s linear;
   transform: skewY(0deg);
   margin-bottom: -20px;
   margin-top: -20px;
+  padding-inline: 32px;
+  box-sizing: border-box;
 }
 
 @keyframes flipping-action {
@@ -69,7 +72,7 @@
   height: 16px;
   position: relative;
   border-radius: 8px;
-  background-color: rgb(139, 139, 224);
+  background-color: rgb(192, 192, 231);
 }
 .button-flip {
   margin-bottom: 50px;
@@ -80,12 +83,51 @@
   top: -4px;
   left: 0px;
   transform: rotate(42deg);
-  transition: transform 1.6s linear;
+  transition: transform 0.8s linear;
+  color: black;
 }
 
 .icon.arrow-rotate-back {
-  transform: rotate(882deg) translateX(50px);
+  transform: rotate(492deg);
 }
 .icon.arrow-rotate-forward {
-  transform: rotate(-882deg) translateX(0px);
+  transform: rotate(42deg);
+}
+
+.login-page-header-choosing-bar-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s linear;
+}
+.arrow-translate-back {
+  transform: translateX(28px);
+}
+.arrow-translate-forward {
+  transform: translateX(0px);
+}
+
+.section-inside-the-login-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  background-color: var(--color-background-body);
+}
+.reverte-the-animation-to-contrast {
+  z-index: 2;
+}
+
+@keyframes flipping-action-special-for-the-inside {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  45% {
+    transform: rotateY(90deg) skewY(4deg);
+  }
+  100% {
+    transform: rotateY(180deg) skewY(0deg);
+  }
 }

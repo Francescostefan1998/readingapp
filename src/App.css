@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap");
+:root {
+  --color-text-white: white;
+  --color-background-primary: rgb(23, 23, 23);
+  --color-background-body: rgb(68, 68, 68);
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  color: var(--color-text-white);
+  background-color: var(--color-background-body);
 }
 .App {
   text-align: center;
