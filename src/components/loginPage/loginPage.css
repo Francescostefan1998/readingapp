@@ -111,6 +111,11 @@
   width: 100%;
   display: block;
   margin-bottom: 6px;
+  transition: box-shadow 0.8s linear;
+}
+
+.section-inside-the-login-container-shado {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 .reverte-the-animation-to-contrast {
   z-index: 2;
@@ -259,4 +264,34 @@
   100% {
     transform: skewY(0deg);
   }
+}
+
+.section-inside-the-login-container {
+  position: relative;
+}
+
+.first-child {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.8s linear;
+}
+
+.second-child {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.8s linear;
+}
+
+.section-inside-the-login-container:hover .first-child {
+  box-shadow: 2px -3px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section-inside-the-login-container:hover .second-child {
+  box-shadow: 2px 5px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section-inside-the-login-container-shadow.first-child {
+  box-shadow: 12px -3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-inside-the-login-container-shadow.second-child {
+  box-shadow: 12px 5px 4px rgba(0, 0, 0, 0.2);
 }

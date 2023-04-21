@@ -4,6 +4,7 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 const LoginPage = () => {
   const [flipTheContainer, setFlipTheContainer] = useState("");
   const [flipTheContainerDown, setFlipTheContainerDown] = useState("");
+  const [shadow, setShadow] = useState("");
   const [flipTheContainerDownInside, setFlipTheContainerDownInside] =
     useState("");
 
@@ -12,12 +13,14 @@ const LoginPage = () => {
   const handleFlipping = () => {
     if (flipTheContainer === "flipping-action") {
       setFlipTheContainer("");
+      setShadow("");
       setFlipTheContainerDown("");
       setArrowRotate("arrow-rotate-back");
       setFlipTheContainerDownInside("");
       setArrowTranslate("arrow-translate-back");
     } else {
       setFlipTheContainer("flipping-action");
+      setShadow("section-inside-the-login-container-shadow");
       setFlipTheContainerDown("flipping-action-down");
       setArrowRotate("arrow-rotate-forward");
 
@@ -48,21 +51,37 @@ const LoginPage = () => {
       <div className={`login-page-container ${flipTheContainer}`}>Sign Up</div>
       <div className={`login-page-container ${flipTheContainerDown}`}>
         <div className={`reverte-the-animation-to-contrast`}>
-          <div className={`section-inside-the-login-container`}>
-            <div className={` ${flipTheContainerDownInside} first`}></div>
-            <div className={` ${flipTheContainerDownInside} second`}></div>
+          <div className={`section-inside-the-login-container `}>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
+            ></div>
           </div>
           <div className={`section-inside-the-login-container`}>
-            <div className={` ${flipTheContainerDownInside} third`}></div>
-            <div className={` ${flipTheContainerDownInside} fourth`}></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child third`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child fourth`}
+            ></div>
+          </div>
+          <div className={`section-inside-the-login-container `}>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child fifth`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child sixth`}
+            ></div>
           </div>
           <div className={`section-inside-the-login-container`}>
-            <div className={` ${flipTheContainerDownInside} fifth`}></div>
-            <div className={` ${flipTheContainerDownInside} sixth`}></div>
-          </div>
-          <div className={`section-inside-the-login-container`}>
-            <div className={` ${flipTheContainerDownInside} seventh`}></div>
-            <div className={` ${flipTheContainerDownInside} eight`}></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child seventh`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child eight`}
+            ></div>
           </div>
 
           <div>Login</div>
