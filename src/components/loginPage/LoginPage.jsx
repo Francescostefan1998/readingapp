@@ -5,6 +5,7 @@ const LoginPage = () => {
   const [flipTheContainer, setFlipTheContainer] = useState("");
   const [flipTheContainerDown, setFlipTheContainerDown] = useState("");
   const [shadow, setShadow] = useState("");
+  const [displaynone, setDisplaynone] = useState("");
   const [flipTheContainerDownInside, setFlipTheContainerDownInside] =
     useState("");
 
@@ -17,6 +18,7 @@ const LoginPage = () => {
       setFlipTheContainerDown("");
       setArrowRotate("arrow-rotate-back");
       setFlipTheContainerDownInside("");
+      setDisplaynone("");
       setArrowTranslate("arrow-translate-back");
     } else {
       setFlipTheContainer("flipping-action");
@@ -26,6 +28,14 @@ const LoginPage = () => {
 
       setFlipTheContainerDownInside("flipping-action-down-inside");
       setArrowTranslate("arrow-translate-forward");
+      setDisplaynone("");
+
+      setTimeout(() => {
+        setDisplaynone("display-none-login");
+
+        setShadow("");
+        setFlipTheContainerDownInside("");
+      }, 760);
     }
   };
   return (
@@ -49,9 +59,11 @@ const LoginPage = () => {
         flip
       </button>
       <div className={`login-page-container ${flipTheContainer}`}>Sign Up</div>
-      <div className={`login-page-container ${flipTheContainerDown}`}>
+      <div
+        className={`login-page-container ${flipTheContainerDown} second-main-login-container`}
+      >
         <div className={`reverte-the-animation-to-contrast`}>
-          <div className={`section-inside-the-login-container `}>
+          <div className={`section-inside-the-login-container ${displaynone}`}>
             <div
               className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
             ></div>
@@ -59,7 +71,7 @@ const LoginPage = () => {
               className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
             ></div>
           </div>
-          <div className={`section-inside-the-login-container`}>
+          <div className={`section-inside-the-login-container ${displaynone}`}>
             <div
               className={` ${flipTheContainerDownInside} ${shadow} first-child third`}
             ></div>
@@ -67,7 +79,7 @@ const LoginPage = () => {
               className={` ${flipTheContainerDownInside} ${shadow} second-child fourth`}
             ></div>
           </div>
-          <div className={`section-inside-the-login-container `}>
+          <div className={`section-inside-the-login-container ${displaynone}`}>
             <div
               className={` ${flipTheContainerDownInside} ${shadow} first-child fifth`}
             ></div>
@@ -75,7 +87,7 @@ const LoginPage = () => {
               className={` ${flipTheContainerDownInside} ${shadow} second-child sixth`}
             ></div>
           </div>
-          <div className={`section-inside-the-login-container`}>
+          <div className={`section-inside-the-login-container ${displaynone}`}>
             <div
               className={` ${flipTheContainerDownInside} ${shadow} first-child seventh`}
             ></div>
