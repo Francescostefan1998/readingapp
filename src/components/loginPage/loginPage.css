@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: var(--color-yellow);
 }
 .login-page-container {
   width: 350px;
@@ -72,7 +73,7 @@
   height: 16px;
   position: relative;
   border-radius: 8px;
-  background-color: rgb(192, 192, 231);
+  background-color: var(--color-yellow);
 }
 .button-flip {
   margin-bottom: 50px;
@@ -85,8 +86,13 @@
   transform: rotate(42deg);
   transition: transform 0.8s linear;
   color: black;
+  cursor: pointer;
 }
-
+.singn-up-login-page-title {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+}
 .icon.arrow-rotate-back {
   transform: rotate(492deg);
 }
@@ -181,7 +187,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  height: 15px;
+  height: 17px;
   border-radius: 4px;
   margin-bottom: -5px;
   background-color: var(--color-background-body);
@@ -193,9 +199,10 @@
 .eight {
   width: 100%;
   display: flex;
+  position: relative;
   align-items: center;
   margin-top: -5px;
-  height: 15px;
+  height: 18px;
   border-radius: 4px;
   margin-bottom: 0px;
   background-color: var(--color-background-body);
@@ -295,11 +302,69 @@
 .section-inside-the-login-container-shadow.second-child {
   box-shadow: 12px 5px 4px rgba(0, 0, 0, 0.2);
 }
+
+.second-main-login-container {
+  height: 226px;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+.button-register-login-page {
+  color: black;
+  background-color: var(--color-yellow);
+  display: flex;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  width: 84px;
+  font-weight: 700;
+  margin-inline: auto;
+  cursor: pointer;
+  margin-top: 10px;
+}
 .display-none-login {
   display: none;
 }
-.second-main-login-container {
-  height: 180px;
-  box-sizing: border-box;
-  padding-top: 30px;
+
+.login-page-input-container-absolute {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  top: -5px;
+  padding-inline: 10px;
+  left: 0;
+}
+
+.login-page-input-container-absolute .icon {
+  font-size: 18px;
+  color: var(--color-yellow);
+}
+
+.login-page-input-container-absolute input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+.login-page-input-container-absolute input::placeholder {
+  /* placeholder text styles */
+  color: rgba(255, 255, 255, 0.6);
+  font-style: "Montserrat", sans-serif;
+}
+
+.flipping-action-down .login-page-input-container-absolute .icon {
+  transform: scale(1.6);
+  transition: transform 1s linear;
+
+  color: var(--color-yellow);
+}
+
+.flipping-action-down .login-page-input-container-absolute input {
+  transform: scale(1.2) translateX(24px);
+  transition: transform 1s linear;
+
+  color: var(--color-yellow);
 }

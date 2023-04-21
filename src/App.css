@@ -4,16 +4,23 @@
   --color-text-white: white;
   --color-background-primary: rgb(41, 41, 41);
   --color-background-body: rgb(68, 68, 68);
+  --color-yellow: rgb(225, 225, 73);
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--color-text-white);
   background-color: var(--color-background-body);
 }
 .App {
   text-align: center;
+  font-size: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-text-white);
+
+  background-color: var(--color-background-body);
 }
 
 .App-logo {
