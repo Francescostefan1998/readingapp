@@ -366,5 +366,5 @@
   transform: scale(1.2) translateX(24px);
   transition: transform 1s linear;
 
-  color: var(--color-yellow);
+  color: var(--color-yellow) !important;
 }
