@@ -119,7 +119,9 @@
   margin-bottom: 6px;
   transition: box-shadow 0.8s linear;
 }
-
+.button-register-login-page.back-side {
+  transform: rotateY(180deg);
+}
 .section-inside-the-login-container-shado {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
@@ -325,7 +327,16 @@
 .display-none-login {
   display: none;
 }
+.display-none-login-opposite {
+  display: none;
+}
+.singn-up-login-page-title.back-side {
+  transform: rotateY(180deg);
+}
 
+.section-inside-the-login-container.back-side {
+  transform: rotateY(180deg);
+}
 .login-page-input-container-absolute {
   width: 100%;
   position: absolute;

@@ -12,6 +12,9 @@ const LoginPage = () => {
   const [flipTheContainer, setFlipTheContainer] = useState("");
   const [flipTheContainerDown, setFlipTheContainerDown] = useState("");
   const [shadow, setShadow] = useState("");
+  const [displaynoneOpposite, setDisplaynoneOpposite] = useState(
+    "display-none-login-opposite"
+  );
   const [displaynone, setDisplaynone] = useState("");
   const [flipTheContainerDownInside, setFlipTheContainerDownInside] =
     useState("");
@@ -27,6 +30,7 @@ const LoginPage = () => {
       setFlipTheContainerDownInside("");
       setDisplaynone("");
       setArrowTranslate("arrow-translate-back");
+      setDisplaynoneOpposite("display-none-login-opposite");
     } else {
       setFlipTheContainer("flipping-action");
       setShadow("section-inside-the-login-container-shadow");
@@ -36,9 +40,11 @@ const LoginPage = () => {
       setFlipTheContainerDownInside("flipping-action-down-inside");
       setArrowTranslate("arrow-translate-forward");
       setDisplaynone("");
+      setDisplaynoneOpposite("display-none-login-opposite");
 
       setTimeout(() => {
         setDisplaynone("display-none-login");
+        setDisplaynoneOpposite("");
 
         setShadow("");
         setFlipTheContainerDownInside("");
@@ -69,12 +75,47 @@ const LoginPage = () => {
         <div className={` ${displaynone} singn-up-login-page-title`}>
           Sign Up
         </div>
+        <div
+          className={` ${displaynoneOpposite} singn-up-login-page-title back-side`}
+        >
+          Log in
+        </div>
       </div>
       <div
         className={`login-page-container ${flipTheContainerDown} second-main-login-container`}
       >
         <div className={`reverte-the-animation-to-contrast`}>
           <div className={`section-inside-the-login-container ${displaynone}`}>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
+            >
+              <div className="login-page-input-container-absolute">
+                <MdPerson className="icon" />
+                <input type="text" placeholder="Full Name" />
+              </div>
+            </div>
+          </div>
+          <div
+            className={`section-inside-the-login-container ${displaynoneOpposite} back-side`}
+          >
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
+            ></div>
+            <div
+              className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
+            >
+              <div className="login-page-input-container-absolute">
+                <MdPerson className="icon" />
+                <input type="text" placeholder="Full Name" />
+              </div>
+            </div>
+          </div>
+          <div
+            className={`section-inside-the-login-container ${displaynoneOpposite} back-side`}
+          >
             <div
               className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
             ></div>
@@ -130,6 +171,11 @@ const LoginPage = () => {
           <div>
             <div className={` ${displaynone} button-register-login-page`}>
               REGISTER
+            </div>
+            <div
+              className={` ${displaynoneOpposite} button-register-login-page back-side mt-4`}
+            >
+              LOGIN
             </div>
           </div>
         </div>
