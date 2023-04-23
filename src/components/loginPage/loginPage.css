@@ -120,7 +120,12 @@
   transition: box-shadow 0.8s linear;
 }
 .button-register-login-page.back-side {
-  transform: rotateY(180deg);
+  transform: rotateY(-90deg);
+  transition: transform 0.8s ease;
+}
+
+.button-register-login-page.back-side {
+  transform: rotateY(-180deg);
 }
 .section-inside-the-login-container-shado {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
