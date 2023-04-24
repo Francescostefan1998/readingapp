@@ -111,8 +111,10 @@ const LoginPage = () => {
               className={` ${flipTheContainerDownInsideBack} ${shadow} second-child second tenth`}
             >
               <div className="login-page-input-container-absolute">
-                <MdPerson className="icon" />
-                <input type="text" placeholder="Full Name" />
+                <MdPerson
+                  className={` ${flipTheContainerDownInsideBack} icon2`}
+                />
+                <input type="text" placeholder="Username" />
               </div>
             </div>
           </div>
@@ -120,14 +122,16 @@ const LoginPage = () => {
             className={`section-inside-the-login-container ${displaynoneOpposite} back-side`}
           >
             <div
-              className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
+              className={` ${flipTheContainerDownInsideBack} ${shadow} first-child first eleventh`}
             ></div>
             <div
-              className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
+              className={` ${flipTheContainerDownInsideBack} ${shadow} second-child second twelveth`}
             >
               <div className="login-page-input-container-absolute">
-                <MdPerson className="icon" />
-                <input type="text" placeholder="Full Name" />
+                <MdPerson
+                  className={` ${flipTheContainerDownInsideBack} icon2`}
+                />
+                <input type="password" placeholder="Password" />
               </div>
             </div>
           </div>
@@ -176,7 +180,7 @@ const LoginPage = () => {
               REGISTER
             </div>
             <div
-              className={` ${displaynoneOpposite} button-register-login-page back-side mt-4`}
+              className={` ${displaynoneOpposite} ${flipTheContainerDownInsideBack} button-register-login-page back-side mt-4`}
             >
               LOGIN
             </div>
