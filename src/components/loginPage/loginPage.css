@@ -384,3 +384,34 @@
 
   color: var(--color-yellow) !important;
 }
+
+@keyframes flipping-action-special-for-the-inside-ninth {
+  0% {
+    transform: skewY(-12deg);
+  }
+  45% {
+    transform: skewY(-6deg);
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+@keyframes flipping-action-special-for-the-inside-tenth {
+  0% {
+    transform: skewY(-10deg);
+  }
+  45% {
+    transform: skewY(-5deg);
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+.flipping-action-down-inside-back.ninth {
+  animation: flipping-action-special-for-the-inside-ninth 0.8s linear forwards !important;
+}
+
+.flipping-action-down-inside-back.tenth {
+  animation: flipping-action-special-for-the-inside-tenth 0.8s linear forwards !important;
+}

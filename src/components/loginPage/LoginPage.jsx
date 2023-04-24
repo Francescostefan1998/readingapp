@@ -10,6 +10,8 @@ import { GiPadlock } from "react-icons/gi";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 const LoginPage = () => {
   const [flipTheContainer, setFlipTheContainer] = useState("");
+  const [flipTheContainerDownInsideBack, setFlipTheContainerDownInsideBack] =
+    useState("");
   const [flipTheContainerDown, setFlipTheContainerDown] = useState("");
   const [shadow, setShadow] = useState("");
   const [displaynoneOpposite, setDisplaynoneOpposite] = useState(
@@ -45,6 +47,7 @@ const LoginPage = () => {
       setTimeout(() => {
         setDisplaynone("display-none-login");
         setDisplaynoneOpposite("");
+        setFlipTheContainerDownInsideBack("flipping-action-down-inside-back");
 
         setShadow("");
         setFlipTheContainerDownInside("");
@@ -102,10 +105,10 @@ const LoginPage = () => {
             className={`section-inside-the-login-container ${displaynoneOpposite} back-side`}
           >
             <div
-              className={` ${flipTheContainerDownInside} ${shadow} first-child first`}
+              className={` ${flipTheContainerDownInsideBack} ${shadow} first-child first ninth`}
             ></div>
             <div
-              className={` ${flipTheContainerDownInside} ${shadow} second-child second`}
+              className={` ${flipTheContainerDownInsideBack} ${shadow} second-child second tenth`}
             >
               <div className="login-page-input-container-absolute">
                 <MdPerson className="icon" />
