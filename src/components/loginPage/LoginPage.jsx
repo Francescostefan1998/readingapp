@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-solid-svg-icons";
 import { MdPerson } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import { HiAtSymbol } from "react-icons/hi";
 import { IoIosCall } from "react-icons/io";
 import { GiPadlock } from "react-icons/gi";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [flipTheContainer, setFlipTheContainer] = useState("");
   const [flipTheContainerDownInsideBack, setFlipTheContainerDownInsideBack] =
     useState("");
@@ -176,11 +178,15 @@ const LoginPage = () => {
           </div>
 
           <div>
-            <div className={` ${displaynone} button-register-login-page`}>
+            <div
+              className={` ${displaynone} button-register-login-page`}
+              onClick={() => navigate("/home")}
+            >
               REGISTER
             </div>
             <div
               className={` ${displaynoneOpposite} ${flipTheContainerDownInsideBack} button-register-login-page back-side mt-4`}
+              onClick={() => navigate("/home")}
             >
               LOGIN
             </div>
