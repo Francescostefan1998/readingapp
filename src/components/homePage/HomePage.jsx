@@ -10,14 +10,15 @@ const HomePage = () => {
       <div className="inside-home">
         <div className="three-bar-container">
           <dir
-            className="three-bar-container-absolute"
-            onClick={() => setClassTrigger("setting-animation")}
+            className={`three-bar-container-absolute ${classTrigger}`}
+            onClick={() => {
+              setClassTrigger("setting-animation");
+              setShowSettings(false);
+            }}
           >
-            <div className={`single-line-settings ${classTrigger} first`}></div>
-            <div
-              className={`single-line-settings ${classTrigger} second`}
-            ></div>
-            <div className={`single-line-settings ${classTrigger} third`}></div>
+            <div className={`single-line-settings ${classTrigger} `}></div>
+            <div className={`single-line-settings ${classTrigger} `}></div>
+            <div className={`single-line-settings ${classTrigger} `}></div>
           </dir>
         </div>
         {showSettings && (

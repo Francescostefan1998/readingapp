@@ -9,14 +9,24 @@
 .three-bar-container {
   position: relative;
   width: 100%;
+  min-width: 380px;
   display: flex;
   align-items: center;
   justify-content: start;
 }
 .three-bar-container-absolute {
   display: flex;
+  padding: 0;
   flex-direction: column;
   gap: 5px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
 }
 .inside-home {
   max-width: 400px;
@@ -28,9 +38,19 @@
   border-radius: 2px;
   background-color: var(--color-yellow);
 }
-.setting-animation.first {
-  animation: firstSettings 0.8s linear;
+.setting-animation.three-bar-container-absolute {
+  animation: rotateSettingsHomepage 1s infinite;
+  transform-origin: center;
 }
 
 @keyframes firstSettings {
+}
+
+@keyframes rotateSettingsHomepage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
