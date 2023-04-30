@@ -17,7 +17,9 @@ const ChatGpt = () => {
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: "how are you today?" }],
+            messages: [
+              { role: "user", content: "ciao sono tomas e sono giovane" },
+            ],
             temperature: 0.7,
           }),
         }
