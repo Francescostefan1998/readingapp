@@ -45,7 +45,7 @@ const ChatGpt = () => {
       const utterances = new SpeechSynthesisUtterance(
         data.choices[0].message.content
       );
-      //utterances.lang = "it-IT"; // Set the language to Italian
+      utterances.lang = "it-IT"; // Set the language to Italian
       setConversationHistory((prevHistory) => [
         ...prevHistory,
         { role: "user", content: question },
@@ -82,6 +82,25 @@ const ChatGpt = () => {
       "Sonia",
       "Tommaso",
       "Tomaso",
+      "Filippo",
+      "filippo",
+      "Sara",
+      "Giovanni",
+      "Sofia",
+      "Sophia",
+      "sophia",
+      "sara",
+      "Lucia",
+      "lucia",
+      "Robby",
+      "Roby",
+      "Roberto",
+      "roberto",
+      "Robberto",
+      "Veronica",
+      "veronica",
+      "Dimitry",
+      "dimitry",
       "Paolo",
       "Elena",
       "Enrico",
@@ -103,7 +122,7 @@ const ChatGpt = () => {
   }
   const handleSpeechInput = () => {
     const recognition = new window.webkitSpeechRecognition();
-    // recognition.lang = "it-IT"; // Set the language to Italian
+    recognition.lang = "it-IT"; // Set the language to Italian
     recognition.onresult = (event) => {
       const transcription = event.results[0][0].transcript;
       setQuestion(transcription);
